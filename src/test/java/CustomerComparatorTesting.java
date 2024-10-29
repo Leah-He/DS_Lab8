@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CustomerComparatorTesting {
-	private Customer c1, c2, c3, c4, c5, c6;
+	private Customer c1, c2, c3, c4;
 	private Customer.WorthComparator worthComp;
 	private Customer.LoyaltyComparator loyaltyComp;
 	private Customer.WorthPoliteComparator WPComp;
