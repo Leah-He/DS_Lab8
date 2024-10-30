@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CustomerComparatorTesting {
-	private Customer c1, c2, c3, c4;
+	private Customer c1, c2, c3, c4, c5;
 	private Customer.WorthComparator worthComp;
 	private Customer.LoyaltyComparator loyaltyComp;
 	private Customer.WorthPoliteComparator WPComp;
@@ -18,6 +18,7 @@ class CustomerComparatorTesting {
 		c2 = new Customer(10000, 2, 15);
 		c3 = new Customer(20000, 2, 5); 
 		c4 = new Customer(10000, 3, 10);
+		c5 = new Customer(10, 1, 10);
 		
 		
 		
@@ -82,14 +83,14 @@ class CustomerComparatorTesting {
         priorityQ.push(c2);
         //assertEquals(c1, priorityQ.head.value); // c1 should still be the head
         
-        priorityQ.push(c3);
+        priorityQ.push(c5);
         //assertEquals(c1, priorityQ.head.value); // c1 should be the head
      
         
         //pop based on yearsWithcompany
         assertEquals(c1, priorityQ.pop()); 
-        assertEquals(c3, priorityQ.pop()); 
-        assertEquals(c2, priorityQ.pop());
+        assertEquals(c2, priorityQ.pop()); 
+        assertEquals(c5, priorityQ.pop());
 		
         // WorthPoliteComparator
         //compares clients based on nw and then if they are the same see politeness
